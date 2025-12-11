@@ -11,20 +11,45 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "What are the eligibility requirements?",
+      question: "Who can apply?",
       answer: (
-        <>
-          <p><strong>Must be a current student studying a technical discipline!</strong></p>
-          <p style={{marginTop: '0.5rem', paddingLeft: '1.5rem'}}>
-            CS, Math, Engineering or an alternative technical track
-          </p>
-        </>
+        <p>Current students in US and Canada studying Engineering, CS, Mathor alternative technical tracks.</p>
       )
     },
     {
       question: "How many Fellows will be selected?",
       answer: (
-        <p>We will select 8 to 10 Fellows for the first cohort.</p>
+        <p>We will select 8 to 10 Fellows for each cohort.</p>
+      )
+    },
+    {
+      question: "When is the Upfront Summit?",
+      answer: (
+        <p>The Upfront Summit is held on the last week of February 2026 in Los Angeles.</p>
+      )
+    },
+    {
+      question: "What is the duration of the program?",
+      answer: (
+        <p>The fellowship runs for 8 weeks, from end of February to end of April 2026.</p>
+      )
+    },
+    {
+      question: "Do you need a registered company to apply?",
+      answer: (
+        <p>No! You can apply as an inidivdual pursueing a deeply sophisticated idea and already have a company in mind.</p>
+      )
+    },
+    {
+      question: "What are the terms of the capital?",
+      answer: (
+        <p>$75,000 investment for 1% equity MFN SAFE. We are also a full-stack venture fund, so if you've already raised capital, we are able to work with you on a case-by-case basis. </p>
+      )
+    },
+    {
+      question: "What is the application process?",
+      answer: (
+        <p>Applications will be reviewed on a rolling basis. We will notify all accepted Fellows by February 10th, 2026.</p>
       )
     }
   ]
@@ -45,13 +70,13 @@ export default function Home() {
               Upfront Founder Fellows
             </h1>
             <p className={styles.heroSubtitle}>
-              A fellowship for the next generation of technical founders.
+              A fellowship for the next generation of technical builders and researchers.
             </p>
             <p className={styles.heroDescription}>
               Upfront Ventures is launching its first-ever Founder Fellows program, built for ambitious technical students who aspire to build generational companies. If you're hacking on projects, leading technical teams, or preparing to launch your first venture, this program is designed to give you everyone one could need to get off the ground!
             </p>
             <p className={styles.heroDescription}>
-              Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the Upfront Summit, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
+              Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <a href="https://upfront.com/summit" target="_blank" rel="noopener noreferrer"><strong>Upfront Summit</strong></a>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
             </p>
             <p className={styles.heroDescription}>
               AND, we back founders with <strong>$75,000</strong> when they incorporate a venture-backable startup!
@@ -70,7 +95,7 @@ export default function Home() {
             </h2>
             <div className={styles.sectionContent}>
               <p>
-                We're creating a small, tight-knit cohort that gets ongoing mentorship, hands-on insight into venture and company-building, and year-round access to Upfront events. The goal: build long-term relationships with emerging founders before they launch their first (or next) venture.
+                We're creating a small, tight-knit cohort that gets ongoing mentorship, hands-on insight into venture and company-building, and year-round access to Upfront events.
               </p>
             </div>
           </div>
@@ -88,7 +113,7 @@ export default function Home() {
               <div className={styles.benefitItem}>
                 <h3> Upfront Summit</h3>
                 <p>We are flying Fellows to LA to attend one day of the Upfront Summit, which is LA's top tech event for founders, investors, and operators.</p>
-                <p style={{marginTop: '1rem'}}>Learn more about last year's summit <a href="https://upfront.com/summit" target="_blank" rel="noopener noreferrer">here</a>!</p>
+                <p style={{marginTop: '1rem'}}>Learn more about last year's summit <a href="https://upfront.com/summit" target="_blank" rel="noopener noreferrer"><strong>here</strong></a>!</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Mentorship</h3>
@@ -103,7 +128,7 @@ export default function Home() {
                 <p>Fellows join a tight-knit community of ambitious technical founders, building lasting relationships with peers who are also on the path to launching their first venture. </p>
               </div>
               <div className={styles.benefitItem}>
-                <h3> Upfront Events All Year</h3>
+                <h3> Year-Round Events</h3>
                 <p>Fellows are invited to mixers, dinners, and local Upfront gatherings in Los Angeles, New York, San Francisco, Boston, Philadelphia, and other cities where our team is active. </p>
               </div>
             </div>
@@ -113,7 +138,7 @@ export default function Home() {
         {/* FAQ Section */}
         <section className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>FAQ</h2>
+            <h2 className={styles.sectionTitle}>FAQs</h2>
             <div className={styles.faqList}>
               {faqs.map((faq, index) => (
                 <div key={index} className={styles.faqItem}>
