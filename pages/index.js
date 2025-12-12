@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Founder Fellows by Upfront Ventures</title>
+        <title>Founder Fellows</title>
         <meta name="description" content="A fellowship for the next generation of researchers and builders." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -67,7 +67,8 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.container}>
             <h1 className={styles.heroTitle}>
-              Upfront Founder Fellows
+              Founder Fellows<br />
+              <span style={{ fontWeight: 400, fontSize: '0.8em' }}>by <em>Upfront Ventures</em></span>
             </h1>
             <p className={styles.heroSubtitle}>
               A fellowship for the next generation of technical builders and researchers.
@@ -76,14 +77,14 @@ export default function Home() {
               Upfront Ventures is launching its first-ever Founder Fellows program, built for ambitious technical students who aspire to build generational companies. If you're hacking on projects, leading technical teams, or preparing to launch your first venture, this program is designed to give you everyone one could need to get off the ground!
             </p>
             <p className={styles.heroDescription}>
-              Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <a href="https://upfront.com/summit" target="_blank" rel="noopener noreferrer"><strong>Upfront Summit</strong></a>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
+              Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <strong>Upfront Summit</strong>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
             </p>
             <p className={styles.heroDescription}>
               AND, we back founders with <strong>$75,000</strong> when they incorporate a venture-backable startup!
             </p>
-            <div className={styles.heroBadge}>
+            <a href="#" className={styles.heroBadge}>
               APPLY TODAY
-            </div>
+            </a>
           </div>
         </section>
 
@@ -93,10 +94,18 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>
               Why We Built This Fellowship
             </h2>
-            <div className={styles.sectionContent}>
-              <p>
-                We're creating a small, tight-knit cohort that gets ongoing mentorship, hands-on insight into venture and company-building, and year-round access to Upfront events.
-              </p>
+            <div className={styles.whySectionContent}>
+              <div className={styles.whyText}>
+                <p>
+                  We're creating a small, tight-knit cohort that gets ongoing mentorship, hands-on insight into venture and company-building, and year-round access to Upfront events.
+                </p>
+                <p>
+                  It is easier than ever to build a company, and AI is accelerating the access to technology. We're excited to empower the next generation of builders from day -1.
+                </p>
+              </div>
+              <div className={styles.whyImage}>
+                <img src="/images/Summit Photo.jpeg" alt="Founder Fellows" />
+              </div>
             </div>
           </div>
         </section>
@@ -166,9 +175,9 @@ export default function Home() {
         {/* Apply Section */}
         <section className={styles.section}>
           <div className={styles.container}>
-            <p className={styles.nextStepsText}>
-              <strong>APPLY TODAY</strong>
-            </p>
+            <a href="#" className={styles.heroBadge}>
+              APPLY TODAY
+            </a>
           </div>
         </section>
       </main>

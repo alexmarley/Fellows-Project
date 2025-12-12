@@ -19,11 +19,12 @@
 
 .heroTitle {
   font-size: 5rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #000;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  color: #0a0a0a;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 .heroFunction {
@@ -34,70 +35,55 @@
 .heroSubtitle {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #666;
+  color: #4a4a4a;
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-align: left;
 }
 
 .heroDescription {
   font-size: 1.125rem;
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.75;
+  color: #1a1a1a;
   max-width: 800px;
   margin-bottom: 2rem;
-}
-
-.heroDescription strong {
-  font-weight: 600;
-  color: #000;
-}
-
-.heroBadge {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #000;
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.heroFunction {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.heroSubtitle {
-  font-size: 1.5rem;
   font-weight: 400;
-  color: #666;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.heroDescription {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #333;
-  max-width: 800px;
-  margin-bottom: 2rem;
+  letter-spacing: -0.005em;
 }
 
 .heroDescription strong {
   font-weight: 600;
-  color: #000;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
 }
 
 .heroBadge {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #000;
+  width: fit-content;
+  margin: 0 0 2rem 0;
+  padding: 0.625rem 1.25rem;
+  background: #0a0a0a;
   color: #fff;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-feature-settings: 'kern' 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.heroBadge:hover {
+  background: #1a1a1a;
+  opacity: 0.9;
+}
+
+.heroBadge:active {
+  opacity: 0.8;
 }
 
 /* Section Styles */
@@ -112,28 +98,31 @@
 
 .sectionHeading {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: lowercase;
-  color: #000;
+  color: #0a0a0a;
   margin-bottom: 3rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .sectionTitle {
   font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.3;
-  color: #000;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #0a0a0a;
   margin-bottom: 2rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   max-width: 900px;
+  font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 .sectionContent {
   font-size: 1.125rem;
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.75;
+  color: #1a1a1a;
   max-width: 800px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
 }
 
 .sectionContent p {
@@ -142,6 +131,44 @@
 
 .sectionContent p:last-child {
   margin-bottom: 0;
+}
+
+/* Why Section Layout */
+.whySectionContent {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.whyText {
+  flex: 1;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+.whyText p {
+  margin: 0 0 1.5rem 0;
+  transform: scaleX(-1) rotate(180deg) scaleY(-1);
+}
+
+.whyText p:last-child {
+  margin-bottom: 0;
+}
+
+.whyImage {
+  flex: 1;
+  max-width: 500px;
+}
+
+.whyImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
 }
 
 /* Grid Layouts */
@@ -168,20 +195,23 @@
 }
 
 .categoryCard:hover {
-  border-color: #000;
+  border-color: #0a0a0a;
 }
 
 .categoryCard h3 {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #000;
+  color: #0a0a0a;
+  letter-spacing: -0.015em;
 }
 
 .categoryCard p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #666;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: -0.005em;
 }
 
 /* Who Cards */
@@ -193,20 +223,23 @@
 }
 
 .whoCard:hover {
-  border-color: #000;
+  border-color: #0a0a0a;
 }
 
 .whoCard h3 {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #000;
+  color: #0a0a0a;
+  letter-spacing: -0.015em;
 }
 
 .whoCard p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #666;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: -0.005em;
 }
 
 /* Benefit Items */
@@ -216,15 +249,20 @@
 
 .benefitItem h3 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 1rem;
-  color: #000;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'kern' 1, 'tnum' 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .benefitItem p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #666;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: -0.005em;
 }
 
 /* FAQ List */
@@ -252,29 +290,33 @@
   text-align: left;
   cursor: pointer;
   font-size: 1.125rem;
-  font-weight: 500;
-  color: #000;
+  font-weight: 600;
+  color: #0a0a0a;
   transition: color 0.2s ease;
+  letter-spacing: -0.01em;
 }
 
 .faqQuestion:hover {
-  color: #666;
+  color: #4a4a4a;
 }
 
 .faqIcon {
   font-size: 1.5rem;
   font-weight: 300;
-  color: #000;
+  color: #0a0a0a;
   margin-left: 1rem;
   flex-shrink: 0;
+  font-feature-settings: 'kern' 1;
 }
 
 .faqAnswer {
   padding: 0 0 1.5rem 0;
   font-size: 1rem;
   line-height: 1.7;
-  color: #666;
+  color: #4a4a4a;
   animation: fadeIn 0.3s ease;
+  font-weight: 400;
+  letter-spacing: -0.005em;
 }
 
 .faqAnswer p {
@@ -299,15 +341,24 @@
 /* Next Steps */
 .nextStepsText {
   font-size: 1.125rem;
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.75;
+  color: #1a1a1a;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+.nextStepsText strong {
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: 0.05em;
 }
 
 .link {
-  color: #000;
+  color: #0a0a0a;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: opacity 0.2s ease;
+  font-weight: 500;
 }
 
 .link:hover {
@@ -349,5 +400,14 @@
   .categoryCard,
   .whoCard {
     padding: 1.5rem;
+  }
+
+  .whySectionContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .whyImage {
+    max-width: 100%;
   }
 }
