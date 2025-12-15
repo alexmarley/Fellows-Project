@@ -1,7 +1,7 @@
 .main {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: #0a0a0a;
 }
 
 .container {
@@ -12,19 +12,62 @@
 
 /* Hero Section */
 .hero {
-  padding: 8rem 0 6rem;
-  background: #fafafa;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 5rem 0 4rem;
+  background: #0a0a0a;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  text-align: center;
+}
+
+.heroBadgeTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto 2rem auto;
+  padding: 0.5rem 1rem;
+  background: #0a0a0a;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .heroTitle {
   font-size: 5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #0a0a0a;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
   line-height: 1.05;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
   font-feature-settings: 'kern' 1, 'liga' 1;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titleHighlight {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.titleAccent {
+  color: #999;
+  font-weight: 600;
 }
 
 .heroFunction {
@@ -33,63 +76,82 @@
 }
 
 .heroSubtitle {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 400;
-  color: #4a4a4a;
+  color: #999;
   margin-bottom: 2rem;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .heroDescription {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin-bottom: 2rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
   font-weight: 400;
   letter-spacing: -0.005em;
+  text-align: center;
 }
 
 .heroDescription strong {
   font-weight: 600;
-  color: #0a0a0a;
+  color: #ffffff;
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums;
   font-feature-settings: 'tnum' 1;
 }
 
+.heroDescription a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.heroDescription a:hover {
+  opacity: 0.7;
+}
+
 .heroBadge {
   display: inline-block;
   width: fit-content;
-  margin: 0 0 2rem 0;
-  padding: 0.625rem 1.25rem;
+  margin: 2rem auto 0 auto;
+  padding: 1rem 2.25rem;
   background: #0a0a0a;
+  border: 1px solid #ffffff;
   color: #fff;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-feature-settings: 'kern' 1;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
+  transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 .heroBadge:hover {
-  background: #1a1a1a;
-  opacity: 0.9;
+  background: #ffffff;
+  color: #0a0a0a;
+  transform: translateY(-2px);
 }
 
 .heroBadge:active {
-  opacity: 0.8;
+  transform: translateY(0);
 }
 
 /* Section Styles */
 .section {
-  padding: 6rem 0;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 5rem 0;
+  border-bottom: 1px solid #2a2a2a;
+  background: #0a0a0a;
 }
 
 .section:last-child {
@@ -100,7 +162,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: lowercase;
-  color: #0a0a0a;
+  color: #ffffff;
   margin-bottom: 3rem;
   letter-spacing: -0.02em;
 }
@@ -109,7 +171,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #0a0a0a;
+  color: #ffffff;
   margin-bottom: 2rem;
   letter-spacing: -0.03em;
   max-width: 900px;
@@ -119,7 +181,7 @@
 .sectionContent {
   font-size: 1.125rem;
   line-height: 1.75;
-  color: #1a1a1a;
+  color: #cccccc;
   max-width: 800px;
   font-weight: 400;
   letter-spacing: -0.005em;
@@ -145,7 +207,7 @@
   flex: 1;
   font-size: 1.125rem;
   line-height: 1.75;
-  color: #1a1a1a;
+  color: #cccccc;
   font-weight: 400;
   letter-spacing: -0.005em;
 }
@@ -186,30 +248,59 @@
   margin-top: 2rem;
 }
 
+/* Carousel Styles */
+.carouselWrapper {
+  overflow: hidden;
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.benefitsCarousel {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  align-items: stretch;
+}
+
+.benefitsCarousel .benefitItem {
+  flex: 0 0 33.333%;
+  min-width: 0;
+  margin-right: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.benefitsCarousel .benefitItem:last-child {
+  margin-right: 0;
+}
+
 /* Category Cards */
 .categoryCard {
   padding: 2rem;
-  border: 1px solid #e5e5e5;
-  background: #fff;
+  border: 1px solid #2a2a2a;
+  background: #0a0a0a;
   transition: border-color 0.2s ease;
 }
 
 .categoryCard:hover {
-  border-color: #0a0a0a;
+  border-color: #ffffff;
 }
 
 .categoryCard h3 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #0a0a0a;
+  color: #ffffff;
   letter-spacing: -0.015em;
 }
 
 .categoryCard p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #4a4a4a;
+  color: #cccccc;
   font-weight: 400;
   letter-spacing: -0.005em;
 }
@@ -217,41 +308,54 @@
 /* Who Cards */
 .whoCard {
   padding: 2rem;
-  border: 1px solid #e5e5e5;
-  background: #fff;
+  border: 1px solid #2a2a2a;
+  background: #0a0a0a;
   transition: border-color 0.2s ease;
 }
 
 .whoCard:hover {
-  border-color: #0a0a0a;
+  border-color: #ffffff;
 }
 
 .whoCard h3 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #0a0a0a;
+  color: #ffffff;
   letter-spacing: -0.015em;
 }
 
 .whoCard p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #4a4a4a;
+  color: #cccccc;
   font-weight: 400;
   letter-spacing: -0.005em;
 }
 
 /* Benefit Items */
 .benefitItem {
-  padding: 0;
+  padding: 1.5rem;
+  border: 1px solid #2a2a2a;
+  background: #0f0f0f;
+  border-radius: 4px;
+  height: 100%;
+  min-height: 280px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefitItem:hover {
+  border-color: #3a3a3a;
 }
 
 .benefitItem h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #0a0a0a;
+  color: #ffffff;
   letter-spacing: -0.02em;
   font-feature-settings: 'kern' 1, 'tnum' 1;
   font-variant-numeric: tabular-nums;
@@ -260,9 +364,26 @@
 .benefitItem p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #4a4a4a;
+  color: #cccccc;
   font-weight: 400;
   letter-spacing: -0.005em;
+  flex: 1;
+  margin: 0;
+}
+
+.benefitItem a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.benefitItem a:hover {
+  opacity: 0.7;
+}
+
+.benefitItem strong {
+  color: #ffffff;
 }
 
 /* FAQ List */
@@ -272,7 +393,7 @@
 }
 
 .faqItem {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .faqItem:last-child {
@@ -291,19 +412,19 @@
   cursor: pointer;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #0a0a0a;
+  color: #ffffff;
   transition: color 0.2s ease;
   letter-spacing: -0.01em;
 }
 
 .faqQuestion:hover {
-  color: #4a4a4a;
+  color: #cccccc;
 }
 
 .faqIcon {
   font-size: 1.5rem;
   font-weight: 300;
-  color: #0a0a0a;
+  color: #ffffff;
   margin-left: 1rem;
   flex-shrink: 0;
   font-feature-settings: 'kern' 1;
@@ -313,7 +434,7 @@
   padding: 0 0 1.5rem 0;
   font-size: 1rem;
   line-height: 1.7;
-  color: #4a4a4a;
+  color: #cccccc;
   animation: fadeIn 0.3s ease;
   font-weight: 400;
   letter-spacing: -0.005em;
@@ -342,19 +463,19 @@
 .nextStepsText {
   font-size: 1.125rem;
   line-height: 1.75;
-  color: #1a1a1a;
+  color: #cccccc;
   font-weight: 400;
   letter-spacing: -0.005em;
 }
 
 .nextStepsText strong {
   font-weight: 700;
-  color: #0a0a0a;
+  color: #ffffff;
   letter-spacing: 0.05em;
 }
 
 .link {
-  color: #0a0a0a;
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: opacity 0.2s ease;
@@ -362,7 +483,7 @@
 }
 
 .link:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* Responsive */
@@ -372,19 +493,39 @@
   }
 
   .hero {
-    padding: 4rem 0 3rem;
+    padding: 3rem 0 2.5rem;
+    min-height: auto;
+  }
+
+  .heroBadgeTop {
+    font-size: 0.6875rem;
+    padding: 0.4375rem 0.875rem;
+    margin-bottom: 1.5rem;
   }
 
   .heroTitle {
     font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   .heroSubtitle {
     font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .heroBadge {
+    padding: 0.875rem 2rem;
+    font-size: 0.8125rem;
+    margin-top: 1.5rem;
   }
 
   .section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 
   .sectionTitle {
@@ -395,6 +536,11 @@
   .benefitsGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .benefitsCarousel .benefitItem {
+    flex: 0 0 100%;
+    padding-right: 0;
   }
 
   .categoryCard,

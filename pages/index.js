@@ -1,13 +1,59 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null)
+  const [carouselIndex, setCarouselIndex] = useState(0)
+  const carouselIntervalRef = useRef(null)
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index)
   }
+
+  const benefits = [
+    {
+      title: "Capital",
+      description: "Each Fellow receives a $75,000 dollar investment from Upfront to support early exploration and company building."
+    },
+    {
+      title: "Upfront Summit",
+      description: (
+        <>
+          We are flying Fellows to LA to attend one day of the Upfront Summit, which is LA's top tech event for founders, investors, and operators.
+          <p style={{marginTop: '1rem'}}>Learn more about last year's summit <a href="https://upfront.com/summit" target="_blank" rel="noopener noreferrer"><strong>here</strong></a>!</p>
+        </>
+      )
+    },
+    {
+      title: "Mentorship",
+      description: "Each fellow will be paired with an investor at Upfront which specializes in your area of interest who you'll get to meet with 1:1."
+    },
+    {
+      title: "Fireside Chats",
+      description: "Fellows get a chance to learn directly from Upfront partners and founders across the portfolio, while getting to directly ask questions to some our fastest growing portfolio companies."
+    },
+    {
+      title: "Community",
+      description: "Fellows join a tight-knit community of ambitious technical founders, building lasting relationships with peers who are also on the path to launching their first venture."
+    },
+    {
+      title: "Year-Round Events",
+      description: "Fellows are invited to mixers, dinners, and local Upfront gatherings in Los Angeles, New York, San Francisco, Boston, Philadelphia, and other cities where our team is active."
+    }
+  ]
+
+  useEffect(() => {
+    carouselIntervalRef.current = setInterval(() => {
+      setCarouselIndex((prevIndex) => (prevIndex + 1) % (benefits.length - 2))
+    }, 5000)
+
+    return () => {
+      if (carouselIntervalRef.current) {
+        clearInterval(carouselIntervalRef.current)
+      }
+    }
+  }, [])
 
   const faqs = [
     {
@@ -66,15 +112,16 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.container}>
+            <div className={styles.heroBadgeTop}>
+              <span className={styles.badgeDot}></span>
+              Now accepting applications
+            </div>
             <h1 className={styles.heroTitle}>
-              Founder Fellows<br />
-              <span style={{ fontWeight: 400, fontSize: '0.8em' }}>by <em>Upfront Ventures</em></span>
+              <span className={styles.titleHighlight}>8 weeks</span> to build<br />
+              <span className={styles.titleAccent}>something</span> <span className={styles.titleAccent}>real</span>.
             </h1>
             <p className={styles.heroSubtitle}>
-              A fellowship for the next generation of technical builders and researchers.
-            </p>
-            <p className={styles.heroDescription}>
-              Upfront Ventures is launching its first-ever Founder Fellows program, built for ambitious technical students who aspire to build generational companies. If you're hacking on projects, leading technical teams, or preparing to launch your first venture, this program is designed to give you everyone one could need to get off the ground!
+              The Founder Fellows program is for ambitious technical builders ready to go from zero to one—with the backing of LA's most active early-stage VC.
             </p>
             <p className={styles.heroDescription}>
               Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <strong>Upfront Summit</strong>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
@@ -85,6 +132,26 @@ export default function Home() {
             <a href="#" className={styles.heroBadge}>
               APPLY TODAY
             </a>
+          </div>
+        </section>
+
+        {/* What Fellows Receive Section */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle} >What Fellows Receive</h2>
+            <div className={styles.carouselWrapper}>
+              <div 
+                className={styles.benefitsCarousel}
+                style={{ transform: `translateX(-${carouselIndex * 33.333}%)` }}
+              >
+                {benefits.map((benefit, index) => (
+                  <div key={index} className={styles.benefitItem}>
+                    <h3>{benefit.title}</h3>
+                    <p>{benefit.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -105,40 +172,6 @@ export default function Home() {
               </div>
               <div className={styles.whyImage}>
                 <img src="/images/Summit Photo.jpeg" alt="Founder Fellows" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What Fellows Receive Section */}
-        <section className={styles.section}>
-          <div className={styles.container}>
-            <h2 className={styles.sectionTitle} >What Fellows Receive</h2>
-            <div className={styles.benefitsGrid}>
-              <div className={styles.benefitItem}>
-                <h3> Capital</h3>
-                <p>Each Fellow receives a $75,000 dollar investment from Upfront to support early exploration and company building. </p>
-              </div>
-              <div className={styles.benefitItem}>
-                <h3> Upfront Summit</h3>
-                <p>We are flying Fellows to LA to attend one day of the Upfront Summit, which is LA's top tech event for founders, investors, and operators.</p>
-                <p style={{marginTop: '1rem'}}>Learn more about last year's summit <a href="https://upfront.com/summit" target="_blank" rel="noopener noreferrer"><strong>here</strong></a>!</p>
-              </div>
-              <div className={styles.benefitItem}>
-                <h3> Mentorship</h3>
-                <p>Each fellow will be paired with an investor at Upfront which specializes in your area of interest who you'll get to meet with 1:1. </p>
-              </div>
-              <div className={styles.benefitItem}>
-                <h3> Fireside Chats</h3>
-                <p>Fellows get a chance to learn directly from Upfront partners and founders across the portfolio, while getting to directly ask questions to some our fastest growing portfolio companies. </p>
-              </div>
-              <div className={styles.benefitItem}>
-                <h3> Community</h3>
-                <p>Fellows join a tight-knit community of ambitious technical founders, building lasting relationships with peers who are also on the path to launching their first venture. </p>
-              </div>
-              <div className={styles.benefitItem}>
-                <h3> Year-Round Events</h3>
-                <p>Fellows are invited to mixers, dinners, and local Upfront gatherings in Los Angeles, New York, San Francisco, Boston, Philadelphia, and other cities where our team is active. </p>
               </div>
             </div>
           </div>
