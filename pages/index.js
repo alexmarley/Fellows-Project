@@ -13,7 +13,7 @@ export default function Home() {
     {
       question: "Who can apply?",
       answer: (
-        <p>Current students in US and Canada studying Engineering, CS, Mathor alternative technical tracks.</p>
+        <p>Current students, recent grads, and dropouts in US and Canada focused on Engineering, CS, Math or alternative technical tracks.</p>
       )
     },
     {
@@ -66,45 +66,41 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.container}>
-            <h1 className={styles.heroTitle}>
-              Founder Fellows<br />
-              <span style={{ fontWeight: 400, fontSize: '0.8em' }}>by <em>Upfront Ventures</em></span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              A fellowship for the next generation of technical builders and researchers.
-            </p>
-            <p className={styles.heroDescription}>
-              Upfront Ventures is launching its first-ever Founder Fellows program, built for ambitious technical students who aspire to build generational companies. If you're hacking on projects, leading technical teams, or preparing to launch your first venture, this program is designed to give you everyone one could need to get off the ground!
-            </p>
-            <p className={styles.heroDescription}>
-              Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <strong>Upfront Summit</strong>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
-            </p>
-            <p className={styles.heroDescription}>
-              AND, we back founders with <strong>$75,000</strong> when they incorporate a venture-backable startup!
-            </p>
-            <a href="#" className={styles.heroBadge}>
-              APPLY TODAY
-            </a>
-          </div>
-        </section>
-
-        {/* Why We Built This Fellowship Section */}
-        <section className={styles.section}>
-          <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>
-              Why We Built This Fellowship
-            </h2>
-            <div className={styles.whySectionContent}>
-              <div className={styles.whyText}>
-                <p>
-                  We're creating a small, tight-knit cohort that gets ongoing mentorship, hands-on insight into venture and company-building, and year-round access to Upfront events.
+            <div className={styles.heroContent}>
+              <div className={styles.heroText}>
+                <h1 className={styles.heroTitle}>
+                  Founder Fellows<br />
+                  <span style={{ fontWeight: 400, fontSize: '0.8em' }}>by <em>Upfront Ventures</em></span>
+                </h1>
+                <p className={styles.heroSubtitle}>
+                  A fellowship for the next generation of technical builders and researchers.
                 </p>
-                <p>
-                  It is easier than ever to build a company, and AI is accelerating the access to technology. We're excited to empower the next generation of builders from day -1.
+                <p className={styles.heroDescription}>
+                  Upfront Ventures is launching its first-ever Founder Fellows program, built for ambitious technical students, recent grads, and dropouts who aspire to build generational companies. If you're hacking on projects, leading technical teams, or preparing to launch your first venture, this program is designed to provide everything one could need to get off the ground!
                 </p>
+                <p className={styles.heroDescription}>
+                  Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <strong>Upfront Summit</strong>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
+                </p>
+                <p className={styles.heroDescription}>
+                  AND, we'll back you with <strong>$75,000+</strong> when you incorporate a venture-backable startup!
+                </p>
+                <a href="#" className={styles.heroBadge}>
+                  APPLY TODAY
+                </a>
               </div>
-              <div className={styles.whyImage}>
-                <img src="/images/Summit Photo.jpeg" alt="Founder Fellows" />
+              <div className={styles.heroImages}>
+                <div className={styles.imageCollage}>
+                  <img 
+                    src="/images/Summit Photo.jpeg" 
+                    alt="Upfront Summit" 
+                    className={styles.collageImage1}
+                  />
+                  <img 
+                    src="/images/Upfront_Team_Picture.png" 
+                    alt="Upfront Team" 
+                    className={styles.collageImage2}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -117,28 +113,51 @@ export default function Home() {
             <div className={styles.benefitsGrid}>
               <div className={styles.benefitItem}>
                 <h3> Capital</h3>
-                <p>Each Fellow receives a $75,000 dollar investment from Upfront to support early exploration and company building. </p>
+                <p>Recieve a $75,000+ investment on incorporation of a venture-backable startup.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Upfront Summit</h3>
-                <p>We are flying Fellows to LA to attend one day of the Upfront Summit, which is LA's top tech event for founders, investors, and operators.</p>
-                <p style={{marginTop: '1rem'}}>Learn more about last year's summit <a href="https://upfront.com/summit" target="_blank" rel="noopener noreferrer"><strong>here</strong></a>!</p>
+                <p>Join us in LA for the <a href="https://youtu.be/VBBqxPVEWeU?si=SXKFeIFqZFPugwgl" target="_blank" rel="noopener noreferrer"><strong>Upfront Summit</strong></a>, where you'll connect with leading founders, investors, and operators at one of the world's premier tech events.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Mentorship</h3>
-                <p>Each fellow will be paired with an investor at Upfront which specializes in your area of interest who you'll get to meet with 1:1. </p>
+                <p>Fellows are paired 1:1 with an investor at Upfront who specializes in your area of interest.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Fireside Chats</h3>
-                <p>Fellows get a chance to learn directly from Upfront partners and founders across the portfolio, while getting to directly ask questions to some our fastest growing portfolio companies. </p>
+                <p>Private sessions with Upfront Partners and founders from our fastest-growing portfolio companies.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Community</h3>
-                <p>Fellows join a tight-knit community of ambitious technical founders, building lasting relationships with peers who are also on the path to launching their first venture. </p>
+                <p>Fellows join a tight-knit community of ambitious founders and builders from across the country.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Year-Round Events</h3>
-                <p>Fellows are invited to mixers, dinners, and local Upfront gatherings in Los Angeles, New York, San Francisco, Boston, Philadelphia, and other cities where our team is active. </p>
+                <p>Fellows are invited to mixers, dinners, and Upfront gatherings in LA, NYC, SF, Boston, Philly, and more!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who We're Looking For Section */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>
+              Who We're Looking For
+            </h2>
+            <p className={styles.whoSubtitle}>Archetypes</p>
+            <div className={styles.whoList}>
+              <div className={styles.whoItem}>
+                <div className={styles.whoNumber}>1</div>
+                <p>You're a senior in college graduating this spring. You've done multiple internships across hyper-growth startups to improve your knowledge on foundation models for robotics and want to start a company ASAP.</p>
+              </div>
+              <div className={styles.whoItem}>
+                <div className={styles.whoNumber}>2</div>
+                <p>You recently dropped out because you got an offer to join a leading AI lab full-time as a junior. Who knows where life will take you, but you're one of the best builders in the world, and others know it too.</p>
+              </div>
+              <div className={styles.whoItem}>
+                <div className={styles.whoNumber}>3</div>
+                <p>You recently graduated and joined a hyper-growth startup as a FDE or member of the technical staff. You want to start a company but aren't quite ready to pull the trigger.</p>
               </div>
             </div>
           </div>
