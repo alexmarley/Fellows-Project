@@ -82,7 +82,8 @@ export default function Home() {
                   Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <a href="https://youtu.be/VBBqxPVEWeU?si=SXKFeIFqZFPugwgl" target="_blank" rel="noopener noreferrer"><strong>Upfront Summit</strong></a>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
                 </p>
                 <p className={styles.heroDescription}>
-                  AND, we'll back you with <strong>$75,000+</strong> when you incorporate a venture-backable startup!
+                  AND, we'll back you with <strong>$75,000+</strong> when you incorporate a{' '}
+                  <span style={{ whiteSpace: 'nowrap' }}>venture-backable startup</span>!
                 </p>
                 <a href="https://upfrontfounderfellows.typeform.com/upfrontventures" target="_blank" rel="noopener noreferrer" className={styles.heroBadge}>
                   APPLY TODAY

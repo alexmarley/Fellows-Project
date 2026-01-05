@@ -99,6 +99,9 @@
   margin-bottom: 1rem;
   font-weight: 400;
   letter-spacing: -0.005em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .heroDescription strong {
@@ -507,12 +510,12 @@
   }
 
   .hero {
-    padding: 4rem 0 3rem;
+    padding: 1.5rem 0 1rem;
   }
 
   .heroContent {
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   .heroText {
@@ -520,11 +523,11 @@
   }
 
   .heroImages {
-    max-width: 100%;
+    display: none;
   }
 
   .imageCollage {
-    height: 400px;
+    height: 0;
   }
 
   .collageImage1,
@@ -533,15 +536,26 @@
   }
 
   .heroTitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .heroSubtitle {
     font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .section {
-    padding: 4rem 0;
+    padding: 3rem 0;
+  }
+
+  .section:first-of-type {
+    padding-top: 1.5rem;
   }
 
   .sectionTitle {
