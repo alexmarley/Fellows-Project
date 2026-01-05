@@ -66,10 +66,11 @@
 }
 
 .heroTitle {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 4.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #0a0a0a;
+  color: #000000;
   line-height: 1.05;
   letter-spacing: -0.04em;
   font-feature-settings: 'kern' 1, 'liga' 1;
@@ -91,18 +92,18 @@
 }
 
 .heroDescription {
-  font-size: 1.0625rem;
-  line-height: 1.7;
+  font-size: 1.125rem;
+  line-height: 1.6;
   color: #1a1a1a;
   max-width: 800px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   font-weight: 400;
   letter-spacing: -0.005em;
 }
 
 .heroDescription strong {
   font-weight: 600;
-  color: #0a0a0a;
+  color: #000000;
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums;
   font-feature-settings: 'tnum' 1;
@@ -112,10 +113,10 @@
   display: inline-block;
   width: fit-content;
   margin: 0.5rem 0 0 0;
-  padding: 0.625rem 1.25rem;
-  background: #0a0a0a;
+  padding: 0.6875rem 1.5rem;
+  background: #000000;
   color: #fff;
-  font-size: 0.8125rem;
+  font-size: 0.84375rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -157,19 +158,21 @@
 }
 
 .sectionHeading {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: lowercase;
-  color: #0a0a0a;
+  color: #000000;
   margin-bottom: 3rem;
   letter-spacing: -0.02em;
 }
 
 .sectionTitle {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #0a0a0a;
+  color: #000000;
   margin-bottom: 2rem;
   letter-spacing: -0.03em;
   max-width: 900px;
@@ -195,10 +198,11 @@
 
 /* Who We're Looking For Section Layout */
 .whoSubtitle {
-  font-size: 1.375rem;
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
   color: #1a1a1a;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-weight: 600;
 }
 
@@ -210,37 +214,63 @@
 .whoItem {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   align-items: flex-start;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.whoItem:hover {
+  background: linear-gradient(135deg, #f5f5f5 0%, #f0f0f0 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transform: translateX(2px);
 }
 
 .whoItem:last-child {
   margin-bottom: 0;
 }
 
+.whoItem:hover {
+  border-color: #000000;
+}
+
+
 .whoNumber {
   flex-shrink: 0;
-  width: 2.25rem;
-  height: 2.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f5;
-  color: #0a0a0a;
-  font-size: 1rem;
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-feature-settings: 'tnum' 1;
+  font-variant-numeric: tabular-nums;
+  padding-right: 0.5rem;
+}
+
+.whoContent {
+  flex: 1;
+}
+
+.whoItemTitle {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
   font-weight: 600;
-  border-radius: 2px;
-  border: 1px solid #e5e5e5;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.015em;
 }
 
 .whoItem p {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: #1a1a1a;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
   font-weight: 400;
   letter-spacing: -0.005em;
   margin: 0;
-  flex: 1;
 }
 
 /* Grid Layouts */
@@ -262,19 +292,20 @@
 .categoryCard {
   padding: 2rem;
   border: 1px solid #e5e5e5;
-  background: #fff;
+  background: #ffffff;
   transition: border-color 0.2s ease;
 }
 
 .categoryCard:hover {
-  border-color: #0a0a0a;
+  border-color: #000000;
 }
 
 .categoryCard h3 {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #0a0a0a;
+  color: #000000;
   letter-spacing: -0.015em;
 }
 
@@ -290,19 +321,20 @@
 .whoCard {
   padding: 2rem;
   border: 1px solid #e5e5e5;
-  background: #fff;
+  background: #ffffff;
   transition: border-color 0.2s ease;
 }
 
 .whoCard:hover {
-  border-color: #0a0a0a;
+  border-color: #000000;
 }
 
 .whoCard h3 {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #0a0a0a;
+  color: #000000;
   letter-spacing: -0.015em;
 }
 
@@ -319,19 +351,20 @@
   padding: 1.5rem;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
-  background: #fff;
+  background: #ffffff;
   transition: border-color 0.2s ease;
 }
 
 .benefitItem:hover {
-  border-color: #0a0a0a;
+  border-color: #000000;
 }
 
 .benefitItem h3 {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #0a0a0a;
+  color: #000000;
   letter-spacing: -0.02em;
   font-feature-settings: 'kern' 1, 'tnum' 1;
   font-variant-numeric: tabular-nums;
@@ -347,7 +380,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #0a0a0a 0%, #0a0a0a 50%, transparent 100%);
+  background: linear-gradient(90deg, #000000 0%, #000000 50%, transparent 100%);
   transform: scaleX(0.6);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -380,6 +413,7 @@
 }
 
 .faqQuestion {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -391,7 +425,7 @@
   cursor: pointer;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #0a0a0a;
+  color: #000000;
   transition: color 0.2s ease;
   letter-spacing: -0.01em;
 }
@@ -403,13 +437,14 @@
 .faqIcon {
   font-size: 1.5rem;
   font-weight: 300;
-  color: #0a0a0a;
+  color: #000000;
   margin-left: 1rem;
   flex-shrink: 0;
   font-feature-settings: 'kern' 1;
 }
 
 .faqAnswer {
+  font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 0 0 1.5rem 0;
   font-size: 1rem;
   line-height: 1.7;
@@ -449,12 +484,12 @@
 
 .nextStepsText strong {
   font-weight: 700;
-  color: #0a0a0a;
+  color: #000000;
   letter-spacing: 0.05em;
 }
 
 .link {
-  color: #0a0a0a;
+  color: #000000;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: opacity 0.2s ease;

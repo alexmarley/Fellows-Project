@@ -13,7 +13,7 @@ export default function Home() {
     {
       question: "Who can apply?",
       answer: (
-        <p>Current students, recent grads, and dropouts in US and Canada focused on Engineering, CS, Math or alternative technical tracks.</p>
+        <p>Current university students, recent grads, and dropouts in US and Canada focused on Engineering, CS, Math or alternative technical tracks.</p>
       )
     },
     {
@@ -31,25 +31,25 @@ export default function Home() {
     {
       question: "What is the duration of the program?",
       answer: (
-        <p>The fellowship runs for 8 weeks, from end of February to end of April 2026.</p>
+        <p>The fellowship runs for 8 weeks, from end of February to end of April 2026. There will also be a weekly 1hr fireside chats we expect all fellows to attend.</p>
       )
     },
     {
       question: "Do you need a registered company to apply?",
       answer: (
-        <p>No! You can apply as an inidivdual pursueing a deeply sophisticated idea and already have a company in mind.</p>
+        <p>No! You can apply as an individual pursuing a deeply sophisticated idea and already have a company in mind.</p>
       )
     },
-    {
-      question: "What are the terms of the capital?",
-      answer: (
-        <p>$75,000 investment for 1% equity MFN SAFE. We are also a full-stack venture fund, so if you've already raised capital, we are able to work with you on a case-by-case basis. </p>
-      )
-    },
+    // {
+    //   question: "What are the terms of the capital?",
+    //   answer: (
+    //     <p>$75,000 investment for 1% equity MFN SAFE. We are also a full-stack venture fund, so if you've already raised capital, we are able to work with you on a case-by-case basis. </p>
+    //   )
+    // },
     {
       question: "What is the application process?",
       answer: (
-        <p>Applications will be reviewed on a rolling basis. We will notify all accepted Fellows by February 10th, 2026.</p>
+        <p>Applications will be reviewed on a rolling basis and close on January 24th. We will notify all accepted Fellows by February 10th, 2026.</p>
       )
     }
   ]
@@ -76,15 +76,15 @@ export default function Home() {
                   A fellowship for the next generation of technical builders and researchers.
                 </p>
                 <p className={styles.heroDescription}>
-                  Upfront Ventures is launching its first-ever Founder Fellows program, built for ambitious technical students, recent grads, and dropouts who aspire to build generational companies. If you're hacking on projects, leading technical teams, or preparing to launch your first venture, this program is designed to provide everything one could need to get off the ground!
+                  Upfront Ventures is launching its first-ever Founder Fellows program. If you're hacking on projects, leading technical teams, or preparing to launch your first venture, this program is designed to provide everything one could need to get off the ground!
                 </p>
                 <p className={styles.heroDescription}>
-                  Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <strong>Upfront Summit</strong>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
+                  Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <a href="https://youtu.be/VBBqxPVEWeU?si=SXKFeIFqZFPugwgl" target="_blank" rel="noopener noreferrer"><strong>Upfront Summit</strong></a>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
                 </p>
                 <p className={styles.heroDescription}>
                   AND, we'll back you with <strong>$75,000+</strong> when you incorporate a venture-backable startup!
                 </p>
-                <a href="#" className={styles.heroBadge}>
+                <a href="https://upfrontfounderfellows.typeform.com/upfrontventures" target="_blank" rel="noopener noreferrer" className={styles.heroBadge}>
                   APPLY TODAY
                 </a>
               </div>
@@ -121,7 +121,7 @@ export default function Home() {
               </div>
               <div className={styles.benefitItem}>
                 <h3> Mentorship</h3>
-                <p>Fellows are paired 1:1 with an investor at Upfront who specializes in your area of interest.</p>
+                <p>Paired 1:1 with an investor at Upfront who specializes in your area of interest.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Fireside Chats</h3>
@@ -129,11 +129,11 @@ export default function Home() {
               </div>
               <div className={styles.benefitItem}>
                 <h3> Community</h3>
-                <p>Fellows join a tight-knit community of ambitious founders and builders from across the country.</p>
+                <p>Join a tight-knit community of ambitious founders and builders from across the country.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Year-Round Events</h3>
-                <p>Fellows are invited to mixers, dinners, and Upfront gatherings in LA, NYC, SF, Boston, Philly, and more!</p>
+                <p>Invited to mixers, dinners, and Upfront gatherings in LA, NYC, SF, Boston, Philly, and more!</p>
               </div>
             </div>
           </div>
@@ -145,19 +145,24 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>
               Who We're Looking For
             </h2>
-            <p className={styles.whoSubtitle}>Archetypes</p>
             <div className={styles.whoList}>
               <div className={styles.whoItem}>
-                <div className={styles.whoNumber}>1</div>
-                <p>You're a senior in college graduating this spring. You've done multiple internships across hyper-growth startups to improve your knowledge on foundation models for robotics and want to start a company ASAP.</p>
+                <div className={styles.whoContent}>
+                  <h3 className={styles.whoItemTitle}>The Founder </h3>
+                  <p>You're graduating this spring with multiple internships at hyper-growth startups. You're ready to start a company ASAP.</p>
+                </div>
               </div>
               <div className={styles.whoItem}>
-                <div className={styles.whoNumber}>2</div>
-                <p>You recently dropped out because you got an offer to join a leading AI lab full-time as a junior. Who knows where life will take you, but you're one of the best builders in the world, and others know it too.</p>
+                <div className={styles.whoContent}>
+                  <h3 className={styles.whoItemTitle}>The Dropout </h3>
+                  <p>You left school to join a leading AI lab full-time. You're one of the best builders in the world, and others know it.</p>
+                </div>
               </div>
               <div className={styles.whoItem}>
-                <div className={styles.whoNumber}>3</div>
-                <p>You recently graduated and joined a hyper-growth startup as a FDE or member of the technical staff. You want to start a company but aren't quite ready to pull the trigger.</p>
+                <div className={styles.whoContent}>
+                  <h3 className={styles.whoItemTitle}>The Engineer</h3>
+                  <p>Recently graduated and working at a hyper-growth startup. You want to start a company but aren't quite ready to pull the trigger.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -166,7 +171,7 @@ export default function Home() {
         {/* FAQ Section */}
         <section className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>FAQs</h2>
+            <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
             <div className={styles.faqList}>
               {faqs.map((faq, index) => (
                 <div key={index} className={styles.faqItem}>
@@ -194,7 +199,7 @@ export default function Home() {
         {/* Apply Section */}
         <section className={styles.section}>
           <div className={styles.container}>
-            <a href="#" className={styles.heroBadge}>
+            <a href="https://upfrontfounderfellows.typeform.com/upfrontventures" target="_blank" rel="noopener noreferrer" className={styles.heroBadge}>
               APPLY TODAY
             </a>
           </div>
