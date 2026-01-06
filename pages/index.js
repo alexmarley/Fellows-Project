@@ -118,7 +118,7 @@ export default function Home() {
               </div>
               <div className={styles.benefitItem}>
                 <h3> Upfront Summit</h3>
-                <p>Join us in LA for the <a href="https://youtu.be/VBBqxPVEWeU?si=SXKFeIFqZFPugwgl" target="_blank" rel="noopener noreferrer"><strong>Upfront Summit</strong></a>, where you'll connect with 1000+ founders, investors, and operators at one of the world's premier tech events.</p>
+                <p>Attend the <a href="https://youtu.be/VBBqxPVEWeU?si=SXKFeIFqZFPugwgl" target="_blank" rel="noopener noreferrer"><strong>2026 Upfront Summit</strong></a>, where you'll connect with 1000+ founders, investors, and operators at one of the world's premier tech events.</p>
               </div>
               <div className={styles.benefitItem}>
                 <h3> Mentorship</h3>
