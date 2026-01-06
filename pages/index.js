@@ -76,7 +76,7 @@ export default function Home() {
                   A fellowship for the next generation of technical builders and researchers.
                 </p>
                 <p className={styles.heroDescription}>
-                  Upfront Ventures is launching its first-ever Founder Fellows program!
+                  <a href="https://upfront.com/" target="_blank" rel="noopener noreferrer"><strong>Upfront Ventures</strong></a> is launching its first-ever Founder Fellows program!
                 </p>
                 <p className={styles.heroDescription}>
                   Over 8 weeks, Fellows receive direct exposure to Upfront's partners, attend the <a href="https://youtu.be/VBBqxPVEWeU?si=SXKFeIFqZFPugwgl" target="_blank" rel="noopener noreferrer"><strong>Upfront Summit</strong></a>, join intimate fireside chats with category-defining founders, and plug into our network of builders and operators.
