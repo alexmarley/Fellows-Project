@@ -31,13 +31,13 @@ export default function Home() {
     {
       question: "What is the duration of the program?",
       answer: (
-        <p>The fellowship runs for 8 weeks, from end of February to end of April 2026. There will also be a weekly 1hr fireside chats we expect all fellows to attend.</p>
+        <p>The fellowship runs for 8 weeks, from end of February to end of April 2026. There will also be weekly 1hr fireside chats we expect all fellows to attend.</p>
       )
     },
     {
       question: "Do you need a registered company to apply?",
       answer: (
-        <p>No! You can apply as an individual pursuing a deeply sophisticated idea and already have a company in mind.</p>
+        <p>No! You can apply as an individual pursuing a complex problem you are passionate about.</p>
       )
     },
     // {
