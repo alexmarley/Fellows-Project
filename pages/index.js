@@ -150,7 +150,7 @@ export default function Home() {
               <div className={styles.whoItem}>
                 <div className={styles.whoContent}>
                   <h3 className={styles.whoItemTitle}>The Founder </h3>
-                  <p>You're graduating this spring with multiple internships at hyper-growth startups. You're ready to start a company ASAP.</p>
+                  <p>You're graduating with multiple internships at hyper-growth startups. You're ready to start a company ASAP.</p>
                 </div>
               </div>
               <div className={styles.whoItem}>
